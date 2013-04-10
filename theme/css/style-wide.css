@@ -319,7 +319,23 @@ padding: .2em 1em;
 /* 5.9 Article content tables
 -----------------------------*/
 
+.blog-archives {
+	padding-top: 0.75em;
+	margin-top: -1px;
+	clear: both;
+	font-size: 2em;
+}
+.blog-archives table, tr {
+	width: 100%;
+}
 
+.blog-archives td {
+	width: 30%;
+}
+
+.blog-archives a {
+	border-bottom: 1px dotted #888;
+}
 
 
 /* 5.10 Article footer
