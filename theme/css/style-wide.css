@@ -37,6 +37,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 */
 
+@font-face { font-family: elena-web; src: url('/theme/fontregular.woff'); }
+@font-face { font-family: elena-web; src: url('/theme/fontregularitalic.woff'); font-style: italic; }
+@font-face { font-family: elena-web; src: url('/theme/fontbold.woff'); font-weight: bold; }
+@font-face { font-family: elena-web; src: url('/theme/fontbolditalic.woff'); font-weight: bold; font-style: italic; }
+
 @media screen, projection {
 
 
@@ -77,28 +82,20 @@ section {
 
 /* 2. BASE SETTINGS (HTML, BODY AND WRAPPER)
 --------------------------------------------*/
-
-html {
-	background-color: #FFF;
-	color: #444;
-}
-
 body {
 	font-size: 17px;
 	line-height: 1.6;
-	font-family: Georgia, serif;
+	font-family: "elena-web", Georgia, serif;
 	border-top: 0.25em solid #444;
+	background: #f6f6f6;
+	zoom: 1;
 }
 
-#wrapper {
-	margin: 0 auto;
-	background-image: none;
-	background-color: #FFF;
-	padding: 1.5em 1em;
-	max-width: 51em;
-	_width: 51em; /* For IE's awesome CSS rendering */
+#mastheadbackground {
+height: 180px;
+margin-bottom: -180px;
+background-color: #500000;
 }
-	
 
 /* 3. UNIVERSAL AND REUSABLE
 ----------------------------*/
@@ -177,6 +174,7 @@ legend {
 
 .hentry {
 	padding-bottom: 1.5em;
+	padding-top: 5em;
 }
 
 .pagination {
@@ -194,29 +192,26 @@ legend {
 
 #site-header {
 	/*margin-bottom: 1.5em;*/
-	padding: 0 0.375em;
+	/*padding: 0 0.375em;*/
 	background-size: 100%;
 	background-repeat: no-repeat;
-	border: 1px dashed #800000;
-	padding-top: 0.5em;
-}
-
-a.header-link {
-	display: inline;
-
+	/*border: 1px dashed #800000;*/
+	padding-top: 1.5em;
+	width: 100%;
+	/*margin-left: 40%;*/
+	/*margin-right: 40%;*/
 	text-align: center;
-	width: 20%;
-	margin-bottom: 2em;
-	float: top;
-	/*padding-top: 0.5em;*/
+	/*background: #500000;*/
+	height: 8em;
 }
 
 #site-title {
 	padding-top: 0;
 	line-height: 1;
-	color: #800000;
+	color: #fff;
 	font-weight: normal;
 	padding-bottom: 0.5em;
+	font-size: 250%;
 }
 
 #site-title a:link,
@@ -233,37 +228,43 @@ a.header-link {
 	font-size: 0.833em;
 	font-weight: normal;
 	font-style: italic;
+	color: white;
 }
 
+#navcontainer {
+	padding-top: 1em;
+	font-size: 130%;
+}
+#navcontainer ul
+{
+margin: 0;
+padding: 0;
+list-style-type: none;
+text-align: center;
+}
+
+#navcontainer ul li { display: inline; }
+
+#navcontainer ul li a
+{
+text-decoration: none;
+padding: .2em 1em;
+color: #eddd9e;
+/*border-radius: 5px;*/
+/*border: 2px solid #eddd9e;*/
+/*background-color: maroon;*/
+}
+
+#content {
+	width: 42%;
+	margin: auto;
+}
 
 /* 5. ARTICLES AND PAGES
 ------------------------*/
 
-#content {
-	padding-left: 0.375em;
-}
 
 
-/* 5.1 Home page styles
------------------------*/
-
-.sticky {
-	font-family: inherit;
-}
-
-.home .format-aside img,
-.home .format-aside p,
-.home .format-aside .wp-caption {
-	padding: 0;
-	margin: 0;
-}
-
-/* 5.2 Single styles
---------------------*/
-
-.single .entry-summary p {
-	font-weight: bold;
-}
 
 
 /* 5.5 Article header
@@ -271,7 +272,7 @@ a.header-link {
 
 .entry-title,
 .page-title {
-	font-size: 1.333em;
+	font-size: 200%;
 	font-weight: bold;
 	padding: 0 0 0 0;
 }
@@ -324,7 +325,8 @@ a.header-link {
    As to why it decides to do this... */
 
 .entry-content {
-	font-size: 1em;
+	font-size: 150%;
+	text-align: justify;
 }
 
 .entry-content p,
@@ -639,196 +641,7 @@ p.wp-caption-text {
 }
 
 
-/* 6. ASIDES
-------------*/
 
-#sidebar {
-	color: #888;
-	border-top: 1px solid #444;
-	padding-top: 0.375em;
-}
-
-
-
-#sidebar .sidebar {
-	font-size: 100%;
-}
-
-.sidebar p ,
-.sidebar ul{
-	margin-bottom: 1.5em;
-}
-
-.sidebar ul {
-	border-top: 1px dotted #AAA;
-	margin-top: -1px;
-}
-
-.sidebar ul li {
-	padding: 0.375em 0;
-	border-bottom: 1px dotted #AAA;
-	margin-left: 0;
-	list-style-type: none;
-}
-
-.sidebar ul li ul,
-ul.sub-menu {
-	margin-bottom: 0;
-}
-
-.sidebar ul li ul li,
-ul.sub-menu li {
-	padding-left: 1em;
-}
-
-.sidebar ul li ul li:last-child {
-	border-bottom: none;
-	margin-bottom: 1px;
-	padding-bottom: 0;
-}
-
-.sidebar img {
-	max-width: 100% !important;
-	height: auto !important;
-}
-
-.widgetContainer {
-	padding-bottom: 0.75em;
-	clear: both;
-}
-
-.widgetTitle {
-	font-size: 1.167em;
-	font-weight: normal;
-	padding: 0 0 0.375em 0;
-}
-
-.sidebar #searchform {
-	padding-bottom: 1.385em;
-}
-ul li.menu-item {
-	font-size: 150%;
-}
-
-ul li.menu-item a:hover, ul li.menu-item a:focus, ul li.menu-item 
-a:active{
-        border-right: 5px solid #888;
-}
-
-ul li a {
-	display: block;
-}
-
-ul li.current_page_item a {
-	border-right: 5px solid #888;
-}
-
-
-/* 6.1 Specific widget styles
------------------------------*/
-
-#wp-calendar table {
-	width: 100%;
-	margin: 1.5em 0;
-	border-collapse: collapse;
-	border: 0.0625em solid #CCC;
-}
-
-#wp-calendar tr {
-	font-size: 0.75em;
-}
-
-#wp-calendar tbody tr:nth-child(even) {
-	background-color: #DFDFDF;
-}
-
-#wp-calendar th,
-#wp-calendar tbody td {
-	text-align: left;
-	padding-left: 0.25em;
-	margin: 0;
-}
-
-#wp-calendar th {
-	font-weight: bold;
-	background-color: #444;
-	color: #FFF;
-}
-
-#wp-calendar table caption {
-	font-size: 0.75em;
-	text-align: left;
-}
-
-#wp-calendar tfoot tr {
-	font-size: 0.75em;
-	color: #AAA;
-}
-
-.sidebar .screen-reader-text {
-	display: none;
-}
-
-.widget_recent_comments a {
-	font-style: normal;
-}
-
-.widget_recent_comments a.url {
-	font-style: italic;
-}
-
-.sidebar #searchform{
-}
-
-#s {
-	width: 12em;
-	font-size: 1em;
-}
-
-#searchsubmit {
-	cursor: pointer;
-	font-size: 1em;
-}
-
-.widget_tag_cloud div {
-	padding-bottom: 0.692em;
-}
-
-.tagcloud {
-	display: block;
-	margin-bottom: 0.692em;
-}
-
-.widget_tag_cloud a:link,
-.widget_tag_cloud a:visited {
-	float: left;
-	margin-right: 0.25em;
-	font-size: 1em !important;
-	background-color: #CFCFCF;
-	padding: 0.25em 0.375em;
-	margin-bottom: 0.375em;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	-o-border-radius: 3px;
-	border-radius: 3px;
-}
-
-.widget_tag_cloud a:hover,
-.widget_tag_cloud a:active {
-	float: left;
-	margin-right: 0.25em;
-	font-size: 1em !important;
-	padding: 0.25em 0.375em;
-	margin-bottom: 0.375em;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	border-radius: 3px;
-	-o-border-radius: 3px;
-}
-
-.widget_tag_cloud a:last-child {
-	margin-bottom: 1.384em;
-}
 
 
 /* 7. FOOTER
@@ -851,238 +664,3 @@ ul li.current_page_item a {
 
 } /* end main screen and projection query */
 
-
-
-/* 8. PRINT STYLES
-------------------*/
-
-@media print {
-
-	* {
-		background-color: #FFF;
-		color: #000;
-	}
-	
-	html {
-		font-size: 100%;
-		line-height: 1.25;
-		font-family: Sanchez, georgia, serif;
-	}
-	
-	#site-nav,
-	#sidebar,
-	#site-footer,
-	.accessibility,
-	.pagination,
-	.entry-taxonomy,
-	#respond,
-	#comments {
-		display: none;
-	}
-	
-	a {
-		text-decoration: none;
-		border-bottom: none;
-	}
-	
-	#site-title {
-		font-size: 1em;
-		margin-bottom: 0;
-	}
-	
-	#tag {
-		font-size: 0.833em;
-		margin: 0 0 3em 0;
-	}
-	
-	h1 a,
-	h2 a {
-		border-bottom: none;
-	}
-	
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		page-break-before: auto;
-	}
-	
-	img {
-		page-break-inside: avoid;
-	}
-	
-	.wp-caption,
-	.entry-content img {
-		max-width: 100% !important;
-		height: auto !important;
-	}
-	
-	.wp-caption-text,
-	.entry-meta p {
-		font-size: 0.833em;
-		font-style: italic;
-	}
-	
-	.entry-summary {
-		font-weight: bold;
-	}
-	
-	blockquote {
-		font-size: 0.915em;
-	}
-
-} /* End @media print query */
-
-
-/* 9. WIDE SCREEN STYLES (using @MEDIA)
----------------------------------------*/
-
-@media screen and (min-width: 600px) {
-
-	/*	
-		
-		We set this first query to make sure that 
-		our measure isn't *too* wide on some narrow
-		width devices.
-
-	*/
-	
-	#wrapper {
-		max-width: 522px;
-		margin-top: 1.5em;
-	}
-	
-	#site-header {
-		background-size: 100%;
-		/*height: 9em;*/
-		padding: 0 0.375em;
-		/*margin-bottom: 3em;*/
-			border: 1px dashed #800000;
-	padding-top: 0.5em;
-	}
-	
-}
-
-@media screen and (min-width: 850px) {
-
-	#wrapper {
-		max-width: 60%;
-		_width: 60%;
-	}
-	
-	#content {
-		/*clear: both;*/
-		width: 70%;
-		padding: 0;
-		float: left;
-		margin-right: 3em;
-		display: inline;
-	}
-
-	#sidebar {
-		float: RIGHT;
-		width: 20%;
-		padding: 0;
-		background-color: transparent;
-		border-top: none;
-	}
-	
-	#site-header {
-		/*height: 9em;*/
-		padding: 0 0.375em;
-			border: 1px dashed #800000;
-	padding-top: 0.5em;
-	}
-	
-
-	#site-title {
-		/*padding-top: 1.5em;*/
-	}
-
-	.header-link {
-			float: right;
-	}
-	
-	.hentry {
-		padding-bottom: 3em;
-	}
-	
-	.entry-title,
-	.page-title {
-		font-size: 1.75em;
-		font-weight: bold;
-		padding: 0 0 0 0;
-		margin-bottom: 0.429em;
-		line-height: 1.2em;
-	}
-	
-	.entry-content h1,
-	.entry-content h2,
-	.entry-content h3,
-	.entry-content h4,
-	.entry-content h5,
-	.entry-content h6,
-	.entry-content dt {
-		font-weight: bold;
-	}
-	
-	.single .entry-summary p {
-		margin-bottom: 1.5em;
-		padding-bottom: 1.5em;
-		border-bottom: 1px dotted #CFCFCF;
-		margin-top: -1px;
-	}
-	
-	.single .entry-content {
-		padding-bottom: 1.5em;
-	}
-	
-	blockquote {
-		padding: 3em 1.5em;
-		margin: 0;
-		color: #888;
-		font-size: 15px;
-	}
-	
-	.single .entry-content .wide,
-	.single .entry-content .wide img {
-		max-width: 50.25em !important;
-		height: auto !important;
-	}
-	
-	.single .pagination {
-		padding-bottom: 1.5em;
-	}
-	
-	.comment-heading,
-	#reply-title {
-		font-weight: bold;
-	}
-	
-	#author,
-	#email,
-	#url,
-	#commentform textarea {
-		width: 32.375em;
-		max-width: 32.375em;
-	}
-	
-	#author,
-	#email,
-	#url {
-		width: 14.375em;
-		max-width: 14.375em;
-	}
-	
-} /* End @media width query */
-
-/* custom shit for scherzo/octopress */
-#blog-archives table {
-	width: 100%;
-}
-
-.entry-header {
-	text-align: center;
-}
