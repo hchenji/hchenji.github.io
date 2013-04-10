@@ -209,12 +209,36 @@ legend {
 	font-size: 4em;
 }
 
+.fulljustify {
 
+}
+.fulljustify:after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
+
+/*hack for one line css justify*/
 
 #navcontainer {
 	padding-top: 1em;
 	font-size: 2em;
+	text-align: justify;
+	color: #eddd9e;
 }
+
+#navcontainer:after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  color: #eddd9e;
+}
+
+#navcontainer a {
+	color: #eddd9e;
+}
+
+/* for horizontal list...
 
 #navcontainer ul
 {
@@ -230,12 +254,8 @@ text-align: center;
 {
 text-decoration: none;
 padding: .2em 1em;
-color: #eddd9e;
-/*border-radius: 5px;*/
-/*border: 2px solid #eddd9e;*/
-/*background-color: maroon;*/
 }
-
+*/
 #content {
 	width: 42%;
 	margin: auto;
