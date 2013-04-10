@@ -282,7 +282,10 @@ color: #eddd9e;
 }
 
 .entry-content img {
-	width: 100%;
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	display: block; 
 }
 
 .entry-content p a {
@@ -295,6 +298,7 @@ color: #eddd9e;
 
 /* 5.9 Article content tables
 -----------------------------*/
+
 
 
 
