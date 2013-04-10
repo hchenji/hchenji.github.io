@@ -55,16 +55,17 @@
            title="Permalink to Site Creation">Site Creation</a>
       </h1>
       <div class="entry-meta">
-        <p>Posted by Harsha on <time>Fri 30 March 2012</time></p>
+        <p>Fri 30 March 2012</time></p>
+
       </div>
     </header>
 
     <div class="entry-content">
       <p>I host my website on NearlyFreeSpeech (NFS), which is a great host. Storage is quite expensive, so is bandwidth to an extent - which is what made me think of using Amazon S3 to store stuff (big fan of Amazon's services). Now how do I automate moving all my static content to S3? W3 total cache seemed the right candidate.</p>
 <h2>W3tc</h2>
-<p>Installation was not supported if my web server ran PHP in safe mode, which is what NFS with its fast PHP option runs. Not a problem, pulled the latest version from trunk. The menu is quite nice and things are easy to setup. Being overenthusiastic, I enabled all the caching techniques. Soon, I see obnoxious page load times:
-<img alt="" src="http://i.imgur.com/21kms.png?1" />
-At this point I had no understanding of how web hosting works, so the initial blame fell on NFS and its "slow"ness because of the (supposed) overloading of its servers.</p>
+<p>Installation was not supported if my web server ran PHP in safe mode, which is what NFS with its fast PHP option runs. Not a problem, pulled the latest version from trunk. The menu is quite nice and things are easy to setup. Being overenthusiastic, I enabled all the caching techniques. Soon, I see obnoxious page load times:</p>
+<p><a href="http://i.imgur.com/21kms.png?1"><img alt="alt text" src="http://i.imgur.com/21kms.png?1" /></a></p>
+<p>At this point I had no understanding of how web hosting works, so the initial blame fell on NFS and its "slow"ness because of the (supposed) overloading of its servers.</p>
 <h2>False!</h2>
 <p>After a quick "cloud" support ticket on NFS, which works on a per-ticket cost basis, I was told that the w3tc plugin was in fact the real culprit, not NFS. Disabled all caching except browser caching, and hoohah no more delay. Currently, the whole page loads in ~1 second, with the first GET request suffering a waiting time of &lt; 500ms on average, unlike previously. The tools I used? Firebug, Chrome's own Network analysis from its developer tools, Pingdom which has a nice waterfall display, and YSlow from Yahoo. All good. </p>
 <h2>S3 vs. Cloudfront</h2>
@@ -74,25 +75,27 @@ At this point I had no understanding of how web hosting works, so the initial bl
 <p>YSlow recommended smushing my css backgroung image, which is the blue border that you see at the top. It is actually a very small file that is made to repeat horizontally. The embedded metadata can be stripped, it serves no purpose. This is part of what Smush.it does, the other part being lossless compression. Using this service caused a 99% reduction in file size. Page load times? About 100ms saved! I did not know that service existed if not for YSlow. </p>
     </div><!-- /.entry-content -->
 
-    <footer class="entry-footer">
-    <div class="entry-taxonomy">
-      <span class="categories"> Categories: <a href="./category/blog.html">Blog</a>
-      </span>
-    </div>
+    
 
-    <div class="pagination">
-            <p class="next">
+    <footer class="entry-footer">
+    <table>
+      <tr>
+        <td> </td>
+
+        <td> <p class="categories"> Categories: <a href="./category/blog.html">Blog</a> </p> </td>
+      
+        <td>       <p class="next">
         <a class="basic-alignment right" href="theme-madness.html" title="Next Post: Theme Madness">Theme Madness &raquo;</a>
         </p>
-      
-          </div>
+      </td>
+      </tr>
+    </table>
 
   </footer>
   </article>
 
       
         <section>
-    <h2 class="comment-heading">Comments</h2>
     <div id="disqus_thread" aria-live="polite">{
       <script type="text/javascript">
         var disqus_identifier = "site-creation.html";

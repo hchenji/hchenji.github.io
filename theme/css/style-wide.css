@@ -83,7 +83,7 @@ section {
 /* 2. BASE SETTINGS (HTML, BODY AND WRAPPER)
 --------------------------------------------*/
 body {
-	font-size: 17px;
+	font-size: 62.5%;
 	line-height: 1.6;
 	font-family: "elena-web", Georgia, serif;
 	border-top: 0.25em solid #444;
@@ -92,8 +92,8 @@ body {
 }
 
 #mastheadbackground {
-height: 180px;
-margin-bottom: -180px;
+height: 15em;
+margin-bottom: -15em;
 background-color: #500000;
 }
 
@@ -117,11 +117,11 @@ a {
 }
 
 a:link {
-	color: #336699;
+	color: #500000;
 }
 
 a:visited {
-	color: #77A3CE;
+	color: #6c491d;
 }
 
 a:hover,
@@ -191,17 +191,12 @@ legend {
 -----------------*/
 
 #site-header {
-	/*margin-bottom: 1.5em;*/
-	/*padding: 0 0.375em;*/
 	background-size: 100%;
 	background-repeat: no-repeat;
-	/*border: 1px dashed #800000;*/
 	padding-top: 1.5em;
+	padding-bottom: 5em;
 	width: 100%;
-	/*margin-left: 40%;*/
-	/*margin-right: 40%;*/
 	text-align: center;
-	/*background: #500000;*/
 	height: 8em;
 }
 
@@ -211,30 +206,16 @@ legend {
 	color: #fff;
 	font-weight: normal;
 	padding-bottom: 0.5em;
-	font-size: 250%;
+	font-size: 4em;
 }
 
-#site-title a:link,
-#site-title a:visited {
-	color: #444;
-}
 
-#site-title a:hover,
-#site-title a:active {
-	color: #444;
-}
-
-#tag {
-	font-size: 0.833em;
-	font-weight: normal;
-	font-style: italic;
-	color: white;
-}
 
 #navcontainer {
 	padding-top: 1em;
-	font-size: 130%;
+	font-size: 2em;
 }
+
 #navcontainer ul
 {
 margin: 0;
@@ -270,213 +251,51 @@ color: #eddd9e;
 /* 5.5 Article header
 ---------------------*/
 
-.entry-title,
-.page-title {
-	font-size: 200%;
-	font-weight: bold;
+.entry-title {
+	font-size: 3.5em;
+	font-weight: normal;
 	padding: 0 0 0 0;
+	color: #6c491d;
 }
 
-.page-title,
-.page .entry-title {
-	margin-bottom: 1.143em;
-}
 
-.entry-meta p,
-.entry-meta ul {
-	font-size: 0.833em;
+.entry-meta {
+	font-size: 2em;
 	color: #888;
-	margin-bottom: 0.9em;
+	margin-bottom: 2em;
 }
-
-/* 5.6 Article content headings
--------------------------------*/
-
-.entry-content h1,
-.entry-content h2,
-.entry-content h3,
-.entry-content h4,
-.entry-content h5,
-.entry-content h6,
-.entry-content dt {
-	font-weight: bold;
-	line-height: 1.2em;
-	padding: 0.8em 0 0.4em 0;
-}
-
-.entry-content h1,
-.entry-content h2 {
-	font-size: 1.167em;
-}
-
-.entry-content h3,
-.entry-content h4,
-.entry-content h5,
-.entry-content h6,
-.entry-content dt {
-	font-size: 1em;	
-}
-
-
-/* 5.7 Article content elements
--------------------------------*/
-
-/* We're going to restate p and list sizes beacause iOS Safari enlarges the .entry-content div's font-size.
-   As to why it decides to do this... */
 
 .entry-content {
-	font-size: 150%;
+	font-size: 2em;
 	text-align: justify;
 }
 
-.entry-content p,
-.entry-content ul,
-.entry-content ol,
-.entry-content dd,
-.comment p,
-.comment ul,
-.comment ol,
-.comment dd {
-	font-size: 1em;
-	margin-bottom: 0.75em;
+.entry-content h2 {
+	font-size: 1.2em;
+	font-style: normal;
+	text-align: justify;
 }
 
-.entry-content li {
-	margin-left: 1.25em;
-}
 
-.entry-content cite {
-	color: #444;
-}
-
-.entry-content pre,
-.comment pre {
-	overflow: auto;
-	display: block;
-	/* May I rot in hell for this IE6 hack */
-	_width: 90%;
-	font-size: 1em;
-	padding: 1.5em;
-	color: #AF0000;
-}
-
-.entry-content a,
-.entry-summary a {
+.entry-content a {
 	border-bottom: 1px dotted #888;
+}
+
+.entry-content img {
+	width: 100%;
+}
+
+.entry-content p a {
+	border-bottom: none;
 }
 
 /* 5.8 Article content images
 -----------------------------*/
 
-/* We're adding some importants here to override any inline dimensions. */
-
-.wp-caption,
-.gallery-caption  {
-	display: block;
-	max-width: 100% !important;
-	padding: 1.438em 0;
-	text-align: center;
-	margin-bottom: 2em;
-	
-	border: 1px solid #fff;
-	background-color: #f6f6f6;
-	color: #666;
-	text-shadow: 1px 1px 0px #fff;
-	-webkit-box-shadow:1px 1px 6px #ddd;
-	-moz-box-shadow:1px 1px 6px #ddd;
-	box-shadow:1px 1px 6px #ddd;
-	position: relative;
-}
-
-.wp-caption img,
-.entry-content img,
-.entry-content video {
-	max-width: 100% !important;
-	height: auto !important;
-	border: 1px solid #EFEFEF;
-}
-
-.aligncenter {
-	display: block;
-	margin: 0 auto;
-	padding: 1.4375em auto;
-}
-
-.alignleft {
-	float: left;
-	display: inline;
-	margin-right: 3em;
-	/*border: 1px solid #EFEFEF;*/
-}
-
-.alignright {
-	float: right;
-	display: inline;
-	margin-left: 0.75em;
-	/*border: 1px solid #EFEFEF;*/
-}
-
-p.wp-caption-text {
-	margin-bottom: 0;
-	font-size: 0.833em;
-}
-
 
 /* 5.9 Article content tables
 -----------------------------*/
 
-.entry-content table,
-.comment table {
-	width: 100%;
-	margin: 1.5em 0;
-	border-collapse: collapse;
-	border: 0.0625em solid #EFEFEF;
-}
-
-.entry-content tr,
-.comment tr {
-	font-size: 0.75em;
-}
-
-.entry-content td,
-.comment td {
-	padding: 0.25em 0;
-}
-
-.entry-content tbody tr:nth-child(even),
-.comment tbody tr:nth-child(even) {
-	background-color: #EFEFEF;
-}
-
-.entry-content th,
-.entry-content tbody td,
-.comment th,
-.comment tbody td {
-	text-align: left;
-	padding-left: 0.25em;
-	margin: 0;
-}
-
-.entry-content th,
-.comment th {
-	font-weight: normal;
-	font-size: 1.333em;
-	background-color: #444;
-	color: #FFF;
-}
-
-.entry-content table caption,
-.comment table caption {
-	font-size: 0.75em;
-	font-style: italic;
-	text-align: left;
-}
-
-.entry-content tfoot tr,
-.comment tfoot tr {
-	font-size: 0.75em;
-	color: #AAA;
-}
 
 
 /* 5.10 Article footer
@@ -487,161 +306,32 @@ p.wp-caption-text {
 	border-top: 1px dotted #CFCFCF;
 	margin-top: -1px;
 	clear: both;
+	font-size: 2em;
+}
+.entry-footer table, tr {
+	width: 100%;
 }
 
-.entry-taxonomy {
-	padding-bottom: 0.75em;
+.entry-footer td {
+	width: 30%;
 }
 
-.entry-taxonomy p {
-	font-size: 0.833em;
-	margin-bottom: 0;
+.entry-footer .previous {
+	text-align: left;
 }
-
-.entry-taxonomy a {
-	font-style: italic;
+.entry-footer .categories {
+	text-align: center;
 }
-
+.entry-footer .next {
+	text-align: right;
+}
 
 /* 5.11 Comments
 ----------------*/
 
-#comments {
-	padding: 0.375em 0 1.5em 0;
-	border-top: 1px solid #AFAFAF;
-	margin-top: -1px;
-	clear: both;
-}	
-
-.comment-heading,
-#reply-title {
-	font-size: 1.167em;
-	padding: 0;
-	margin-bottom: 0.75em;
-	font-weight: bold;
+#disqus_thread {
+	padding-top: 3em;
 }
-
-.form-allowed-tags {
-	font-size: 0.833em;
-}
-
-.page-numbers {
-	font-size: 0.833em;
-	padding-left: 1em;
-}
-
-.current {
-	font-weight: bold;
-}
-
-.bypostauthor {
-	padding: auto;
-	background-color: #FFF;
-}
-
-.avatar {
-	float: left;
-	margin-right: 0.375em;
-	margin-bottom: 0.375em;
-}
-
-.says {
-	display: none;
-}
-
-.reply {
-	display: block;
-	font-size: 1em;
-	margin-bottom: 3em;
-}
-
-.vcard {
-	padding-top: 0.75em;
-}
-
-.fn {
-	font-style: normal;
-	font-size: 1em;
-	font-weight: bold;
-	display: block;
-	float: left;
-}
-
-.comment-meta {
-	font-size: 0.833em;
-	margin-bottom: 0.375em;
-	clear: both;
-}
-
-.commentlist li {
-	list-style-type: none;
-}
-
-.pinglist li {
-	font-size: 0.75em;
-	color: #AAA;
-	list-style-type: none;
-}
-
-.children li {
-	padding-left: 1em;
-	margin-left: 1em;
-	border-left: 0.0625em dotted #CFCFCF;
-}
-
-#commentform label {
-	font-size: 0.833em;
-}
-
-#author,
-#email,
-#url,
-#commentform textarea {
-	display: block;
-	border: 1px solid #CFCFCF;
-	max-width: 98%; /* Make sure width - border never exceeds container width */
-}
-	
-#author,
-#email,
-#url {
-	margin-bottom: 0.5em;
-	padding: 0.25em;
-	font-size: 1em;
-}
-
-#commentform textarea {
-	display: block;
-	font-size: 1em;
-	padding: 0.25em;
-	height: 12em;
-}
-
-#submit {
-	cursor: pointer;
-}
-
-.form-allowed-tags {
-	font-size: 0.833em;
-	line-height: 1.25em;
-}
-
-.subscribe-to-comments {
-	margin-bottom: 0;
-}
-
-.subscribe-to-comments #subscribe {
-	float: left;
-	margin-right: 2px;
-}
-
-.subscribe-to-comments label {
-	float: left;
-	margin-bottom: 0 !important;
-}
-
-
-
 
 
 /* 7. FOOTER
@@ -664,3 +354,38 @@ p.wp-caption-text {
 
 } /* end main screen and projection query */
 
+
+
+/*iphone landscape...*/
+
+@media (max-width: 680px) {
+	#content {
+		width: 80%;
+	}
+
+	#navcontainer {
+		font-size: 1.8em;
+	}
+
+	.entry-content {
+		font-size: 2em;
+		text-align: left;
+	}
+}
+
+
+@media (max-width: 520px) {
+
+	#content {
+		width: 95%;
+	}
+
+	#navcontainer {
+		font-size: 1.4em;
+	}
+
+	.entry-content {
+		font-size: 2em;
+		text-align: left;
+	}
+}

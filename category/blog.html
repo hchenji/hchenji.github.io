@@ -47,10 +47,9 @@
         </header>
 
         
-                  
+          
         
 
-<!-- <aside id="featured" class="body"> -->
 <article class="hentry post" role="article">
     <header class="entry-header">
       <h1 class="entry-title">
@@ -69,34 +68,40 @@
 <h2>Fonts</h2>
 <p>Typekit, no second thoughts there. Google has some free web fonts, but not many professionally designed themes from good foundries. Decided on a serif body font with a sans-serif header font. So be it!</p>
 </div>
-<p>There are <a href="../theme-madness.html#disqus_thread">comments</a>.</p></article>
+</article>
+
+        
+
+<article class="hentry post" role="article">
+    <header class="entry-header">
+      <h1 class="entry-title">
+        <a href="../site-creation.html" rel="bookmark"
+        title="Permalink to Site Creation">Site Creation</a>
+    </h1>
+    <div class="entry-meta">
+        <p>Posted by Harsha on <time>Fri 30 March 2012</time></p>
+    </div>
+</header>
+
+<div class="entry-content">
+    <p>I host my website on NearlyFreeSpeech (NFS), which is a great host. Storage is quite expensive, so is bandwidth to an extent - which is what made me think of using Amazon S3 to store stuff (big fan of Amazon's services). Now how do I automate moving all my static content to S3? W3 total cache seemed the right candidate.</p>
+<h2>W3tc</h2>
+<p>Installation was not supported if my web server ran PHP in safe mode, which is what NFS with its fast PHP option runs. Not a problem, pulled the latest version from trunk. The menu is quite nice and things are easy to setup. Being overenthusiastic, I enabled all the caching techniques. Soon, I see obnoxious page load times:</p>
+<p><a href="http://i.imgur.com/21kms.png?1"><img alt="alt text" src="http://i.imgur.com/21kms.png?1" /></a></p>
+<p>At this point I had no understanding of how web hosting works, so the initial blame fell on NFS and its "slow"ness because of the (supposed) overloading of its servers.</p>
+<h2>False!</h2>
+<p>After a quick "cloud" support ticket on NFS, which works on a per-ticket cost basis, I was told that the w3tc plugin was in fact the real culprit, not NFS. Disabled all caching except browser caching, and hoohah no more delay. Currently, the whole page loads in ~1 second, with the first GET request suffering a waiting time of &lt; 500ms on average, unlike previously. The tools I used? Firebug, Chrome's own Network analysis from its developer tools, Pingdom which has a nice waterfall display, and YSlow from Yahoo. All good. </p>
+<h2>S3 vs. Cloudfront</h2>
+<p>S3 was quite easy to setup from W3tc's settings page. I uploaded all static content to a bucket on S3, from which it is currently served (cdn.hchenji.com). S3 is not exactly a CDN, it is just a highly reliable storage service. Using Amazon's Cloudfront (served as a cloudfront.net URL) will geographically optimize the serving of page components, which makes it a CDN. How much will this reduce the delay by?</p>
+<p>Actually...it worsened the page load time to about 1.5 s as compared to the current ~1 second with S3 based content serving. Why? Probably the extra PHP processing that the plugin does. I do not have time to investigate this, but if anyone knows more about this please leave a comment. No more Cloud for me, S3 is good enough.</p>
+<h2>Smushing</h2>
+<p>YSlow recommended smushing my css backgroung image, which is the blue border that you see at the top. It is actually a very small file that is made to repeat horizontally. The embedded metadata can be stripped, it serves no purpose. This is part of what Smush.it does, the other part being lossless compression. Using this service caused a 99% reduction in file size. Page load times? About 100ms saved! I did not know that service existed if not for YSlow. </p>
+</div>
+</article>
 
 
 
-<section>
-    <h1>Other articles</h1>
-    <hr />
-    <ol id="posts-list" class="hfeed">
-                                                        
-
- 
-                        <li><article class="hentry">    
-                    <header>
-                        <h1><a href="../site-creation.html" rel="bookmark"
-                         title="Permalink to Site Creation">Site Creation</a></h1>
-                     </header>
-
-                     <div class="entry-content">
-                                                <p>I host my website on NearlyFreeSpeech (NFS), which is a great host. Storage is quite expensive, so is bandwidth to an extent - which is what made me think of using Amazon S3 to store stuff (big fan of Amazon's services). Now how do I automate moving all my static ...</p>
-                        <a class="readmore" href="../site-creation.html">read more</a>
-                        <p>There are <a href="../site-creation.html#disqus_thread">comments</a>.</p>                    </div><!-- /.entry-content -->
-                </article></li>
-                                            </ol><!-- /#posts-list -->
-                        <p class="paginator">
-        Page 1 / 1
-    </p>
-                    </section><!-- /#content -->
-                                        </div>
+        </div>
 
 
 
