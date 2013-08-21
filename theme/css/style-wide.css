@@ -157,10 +157,11 @@ dd {
 }
 
 blockquote {
-	padding: 1.5em;
+	padding-left: 1.5em;
 	margin: 0;
 	color: #888;
-	font-size: 15px;
+	font-size: 85%;
+	border-left: 5px solid #CCC;
 }
 
 code {
@@ -297,9 +298,9 @@ padding: .2em 1em;
 }
 
 
-.entry-content a {
+/*.entry-content a {
 	border-bottom: 1px dotted #888;
-}
+}*/
 
 .entry-content img {
 	max-width: 100%;
@@ -308,9 +309,9 @@ padding: .2em 1em;
 	display: block; 
 }
 
-.entry-content p a {
+/*.entry-content p a {
 	border-bottom: none;
-}
+}*/
 
 /* 5.8 Article content images
 -----------------------------*/
@@ -333,10 +334,10 @@ padding: .2em 1em;
 	width: 30%;
 }
 
-.blog-archives a {
+/*.blog-archives a {
 	border-bottom: 1px dotted #888;
 }
-
+*/
 
 /* 5.10 Article footer
 ----------------------*/
@@ -428,4 +429,16 @@ padding: .2em 1em;
 		font-size: 2em;
 		text-align: left;
 	}
+}
+
+
+.footnote > ol {
+
+	margin-left: 7.5%;
+	font-size: 85%;
+}
+
+a {
+	border-bottom: 1px dashed #000;
+    text-decoration: none;
 }
