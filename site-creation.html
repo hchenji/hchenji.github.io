@@ -8,52 +8,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Harsha Chenji">
 
-
-  <link rel="stylesheet" href="./theme/css/style-wide.css" media="screen, projection" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="./theme/css/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="./theme/css/reset.css" media="screen, projection" type="text/css" />
+  <link rel="stylesheet" href="./theme/css/style-wide.css" media="screen, projection" type="text/css" />
+  <link rel="stylesheet" href="./theme/css/font-awesome.min.css" media="screen, projection" type="text/css" />
+  <link rel="stylesheet" href="./theme/css/sentinel.css" type="text/css" />
 
   <link href="./theme/images/icons/favicon.png" rel="icon">
-    <link href="http://localhost/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Harsha Chenji Atom Feed" />
+    <link href="http://localhost/feeds\all.atom.xml" type="application/atom+xml" rel="alternate" title="Harsha Chenji Atom Feed" />
     
-  <link href='http://fonts.googleapis.com/css?family=Sanchez:400italic,400' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-
 </head>
 
     <body>
-      <div id="mastheadbackground">&nbsp;</div>
-
-      <div id="content" role="main">
-        <header id="site-header" role="banner">
-          <div id="branding">
-            <h1 id="site-title">Harsha Chenji</h1>
-            <!-- <p id="tag">A Blog</p> -->
-          </div>
-
-          <div id="navcontainer">
-            <a href="./">Home</a> •
+  
+      <header id="site-header" role="banner">
+        <a href="/">Harsha Chenji</a>
+        <nav class="fulljustify">
+            <a href="./index.html">Home</a> •
             <a href="./pages/about.html">About</a> •
             <a href="./archives.html">Archives</a> •
             <a href="./pages/contact.html">Contact</a> •
             <a href="http://students.cse.tamu.edu/cjh/">@TAMU-CS</a> •  
             <a href="https://twitter.com/hchenji"><i class="icon-twitter"></i></a> • 
             <a href="http://www.linkedin.com/pub/harsha-chenji/8/570/44b"><i class="icon-linkedin-sign"></i></a>
-          </div>
-        </header>
+        </nav>
+      </header>
 
-
-        
-  <article class="hentry post" role="article">
-    <header class="entry-header">
-      <h1 class="entry-title">
+      
+  <article role="article">
+    <header>
+      <h3 class="entry-title">
         <a href="./site-creation.html" rel="bookmark"
            title="Permalink to Site Creation">Site Creation</a>
-      </h1>
-          <div class="entry-meta">
-        <p>Fri 30 March 2012</p>
-    </div>    </header>
+      </h3>
+      <h4>Fri 30 March 2012</h4>    </header>
 
-    <div class="entry-content">
+    <div class="article-content">
       <p>I host my website on NearlyFreeSpeech (NFS), which is a great host. Storage is quite expensive, so is bandwidth to an extent - which is what made me think of using Amazon S3 to store stuff (big fan of Amazon's services). Now how do I automate moving all my static content to S3? W3 total cache seemed the right candidate.</p>
 <h2>W3tc</h2>
 <p>Installation was not supported if my web server ran PHP in safe mode, which is what NFS with its fast PHP option runs. Not a problem, pulled the latest version from trunk. The menu is quite nice and things are easy to setup. Being overenthusiastic, I enabled all the caching techniques. Soon, I see obnoxious page load times:</p>
@@ -66,10 +55,9 @@
 <p>Actually...it worsened the page load time to about 1.5 s as compared to the current ~1 second with S3 based content serving. Why? Probably the extra PHP processing that the plugin does. I do not have time to investigate this, but if anyone knows more about this please leave a comment. No more Cloud for me, S3 is good enough.</p>
 <h2>Smushing</h2>
 <p>YSlow recommended smushing my css backgroung image, which is the blue border that you see at the top. It is actually a very small file that is made to repeat horizontally. The embedded metadata can be stripped, it serves no purpose. This is part of what Smush.it does, the other part being lossless compression. Using this service caused a 99% reduction in file size. Page load times? About 100ms saved! I did not know that service existed if not for YSlow. </p>
-    </div><!-- /.entry-content -->
-
-    
-
+    </div>
+  
+    <hr>
     <footer class="entry-footer">
     <table>
       <tr>
@@ -78,7 +66,7 @@
         <td> <p class="categories"> Categories: <a href="./category/blog.html">Blog</a> </p> </td>
       
         <td>       <p class="next">
-        <a class="basic-alignment right" href="theme-madness.html" title="Next Post: Theme Madness">Theme Madness &raquo;</a>
+        <a href="theme-madness.html" title="Next Post: Theme Madness">Theme Madness &raquo;</a>
         </p>
       </td>
       </tr>
@@ -87,7 +75,7 @@
   </footer>
   </article>
 
-      
+            <h1>Comments</h1>
         <section>
     <div id="disqus_thread" aria-live="polite">{
       <script type="text/javascript">
@@ -105,9 +93,6 @@
   </section>
 
     
-      </div>
-
-
 
       <footer id="site-footer" role="contentinfo">
         <p>
@@ -117,9 +102,6 @@
         </p>
       </footer>
 
-
-      <script type="text/javascript" src="//use.typekit.net/gpf1fbp.js"></script>
-      <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
       <script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-17553607-1']);
