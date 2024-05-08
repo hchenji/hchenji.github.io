@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+    <meta http-equiv="pragma" content="no-cache" />
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<title>Harsha Chenji</title>
+</head>
+<body role="document">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">
+            Harsha Chenji
+          </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+<li><a href="pubs.html">Publications</a></li>
+<li><a href="wsrg/research.html">Research</a></li>
+<li><a href="wsrg/">WSRG</a></li>
+<li><a href="Chenji_CV.pdf">CV</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <div class="container main-container" role="main">
+<p></p>
+<a name="ee3613"> </a> <h2>EE3613</h2> 
+<p>Imagine a large scale disaster that has occurred over a large scale geographical area, such as the earthquake and tsunami in Japan. One of the key disaster response functions is Urban Search &amp; Rescue, which involves &ldquo;the location, rescue (extrication), and initial medical stabilization of victims trapped in confined spaces&rdquo;. The design of DistressNet began based on our interaction with members of Texas Task Force 1 headquartered in College Station. We identified a set of areas for improving disaster response times: victim detection in collapsed buildings, information storage and collection about buildings, detection of first responder team separation and lost tools, and throughput and latency of data delivered to first responders. DistressNet discusses the design (i.e., software/hardware architectures, and the guiding design principles), implementation and realistic evaluation of a system that targets the aforementioned areas for reducing the Urban Search & Rescue response time. It is built using battery powered COTS hardware and with open standards and protocols, pushing the complexity that the very diverse Urban Search & Rescue scenarios pose, to user level applications (apps). Apps in DistressNet run on unmodified hardware ranging from smartphones, to low power ZigBee motes and wireless routers.
+</p>
+<div class="col-md-12 text-center">
+<a class="btn btn-primary" href="http://distressnet.nfshost.com/" role="button">Click here for the DistressNet micro-site</a>
+</div>
+<p></p>
+<h3>Publications</h3>
+<ol>
+<li><p>H. Chenji, W. Zhang, R. Stoleru, C. Arnett,
+&ldquo;DistressNet: A Disaster Response System Providing Constant Availability Cloud-like Services,&rdquo;
+in Ad Hoc Networks (Elsevier), to appear.</p>
+</li>
+<li><p>H. Chenji, W. Zhang, M. Won, R. Stoleru, C. Arnett,
+&ldquo;A Wireless System for Reducing Response Time in Urban Search &amp; Rescue,&rdquo;
+in 31st IEEE International Performance Computing and Communications Conference (IPCCC), 2012</p>
+</li>
+<li><p>S. M. George, W. Zhou, H. Chenji, M. Won, Y.-Oh Lee, A. Pazarloglou, R. Stoleru, P. Barooah,
+&ldquo;A Wireless AdHoc and Sensor Network Architecture for Situation Management in Disaster Response,&rdquo;
+in IEEE Communications Magazine, Mar. 2010, Vol. 48, No. 3</p>
+</li>
+<li><p>H. Chenji, A. Hassanzadeh, M. Won, Y. Li, W. Zhang, X. Yang, R. Stoleru, G. Zhou,
+&ldquo;A Wireless Sensor, AdHoc and Delay Tolerant Network System for Disaster Response,&rdquo;
+Technical Report, Texas A&amp;M University, Dept. of Computer Science and Engg., TR-2011-9-2, 2011
+
+</p>
+</li>
+</ol>
+<a name="raven"> </a> <h2>Raven: Energy Aware QoS Control for DRNs</h2> 
+<p>QoS is difficult to guarantee in opportunistic networks primary because of the unknown random mobility. This unpredictability makes it very difficult to accurately estimate the node inter-contact time, which is the primary component of the end-to-end packet delivery delay, and remains an open problem. Sending large amounts of data over resource constrained DRNs saturates the limited contact bandwidth, causing large queuing delays and exacerbating the packet delivery delay. Additionally, the <i>variance of the packet delivery delay</i>, an important QoS metric, has not been sufficiently addressed in recent research as opposed to other metrics like packet delivery delay, packet delivery ratio and throughput. Raven is a risk-averse routing framework for opportunistic networks. In research related to finance and traffic engineering, decision making in the presence of uncertainty is called risk-aversion. A risk-averse user will prefer a strategy whose reward has lower variance (i.e., more predictable) but a higher mean (i.e., lower reward). A DRN's user will prefer network routes that deliver all the data at once, in return for a slightly higher average delay.
+
+The mobility in DistressNet is modeled using an extended version of the Post Disaster Mobility Model. Stochastic multi-graphs are used to mathematically represent the travel time between areas of the disaster. Edge weights in such graphs are not scalars but are random variables with a mean and variance - here, the edge weights represent travel time distributions. The classical K-Shortest Paths algorithm, after being modified to handle stochastic edge weights, is used to find routes in the network using this stochastic multi-graph - data is then sent on multiple routes simultaneously. This scheme has been implemented in a simulator and thoroughly evaluated; the results show that Raven is able to effect and control a trade-off between QoS metrics. Mathematical analysis of the simultaneous co-existence of risk-aversion as well as replication (sending a packet on multiple paths simultaneously) shows interesting results.
+</p>
+<h3>Publications</h3>
+<ol>
+<li><p>H. Chenji, L. Smith, R. Stoleru, E. Nikolova,
+&ldquo;Raven: Energy Aware QoS Control for DRNs,&rdquo;
+in 9th IEEE International Conference on Wireless and Mobile Computing, Networking and Communications (WiMob), 2013
+
+</p>
+</li>
+</ol>
+<a name="fuzloc"> </a> <h2>FuzLoc</h2> 
+<p>FuzLoc is a distributed indoor self-localization protocol that the aforementioned low power motes can use. By tagging sensor data with a location, first responders&rsquo; response time can be reduced. The node localization problem in indoor mobile sensor networks is not new. Particle filters adapted from robotics have produced good localization accuracies in conventional settings. In spite of these successes, state of the art solutions suffer significantly when used in challenging indoor and mobile environments characterized by a high degree of radio signal irregularity (such as a collapsed building with concrete blocks and iron bars). This is because the radio range of a node is no longer the same in all directions. A particle filter becomes &ldquo;polluted&rdquo; by incorrectly considering far away nodes as neighbors, successively corrupting the localization accuracy, and leaving the node unable to recover. This is known as the kidnapping problem in robotics. Range-based multi-lateration solutions suffer since they are unable to correctly infer the distance between two nodes owing to phenomenon like interference which affect the received signal strength.
+
+FuzLoc uses a fuzzy logic-based approach for mobile node localization in challenging environments. The imprecision present in ranging is used to compute a node's location <i>as an area</i> and not a two dimensional point. Localization is formulated as a fuzzy multi-lateration problem, and is solved using a nonlinear system of equations where the variables are not scalars but are fuzzy numbers with a range and membership function. For sparse networks with few available anchors, a fuzzy grid-prediction scheme is proposed. The fuzzy logic-based localization scheme has been implemented in a simulator and compared to state of the art solutions. Extensive simulation results demonstrate improvements in the localization accuracy from 20% to 40% when the radio irregularity is high. A hardware implementation running on Epic motes and transported by iRobot mobile hosts confirms simulation results and extends them to the real world. FuzLoc was the subject of my M.S. thesis, completed in 2009 under the guidance of Dr. Radu Stoleru.
+</p>
+<h3>Publications</h3>
+<ol>
+<li><p>H. Chenji, R. Stoleru,
+&ldquo;Towards Accurate Mobile Sensor Network Localization in Noisy Environments,&rdquo;
+in IEEE Transactions on Mobile Computing, Jun. 2013, Vol. 12, No. 6</p>
+</li>
+<li><p>H. Chenji, R. Stoleru,
+&ldquo;Mobile Sensor Network Localization in Harsh Environments,&rdquo;
+in 6th IEEE International Conference on Distributed Computing in Sensor Systems (DCOSS), 2010
+
+</p>
+</li>
+</ol>
+<a name="secure"> </a> <h2>Secure Neighbor Discovery in Mobile Ad Hoc Networks</h2> 
+<p>This research encompasses various security-related research efforts in wireless and adhoc sensor networks. Secure Neighbor Discovery is the process by which a node in a network determines the total number and identity of other nodes in its vicinity. It is a fundamental building block of many routing, clustering, and localization protocols. Neighbor discovery is especially important to the proper functioning of wireless networks.
+One particularly insidious threat in a wireless network is the wormhole or relay attack. In this attack, two or more attackers collaborate to record communications at the packet or bit level in one location and play back the communications elsewhere. Wormholes may disrupt communications, alter routing, or induce localization errors. Further exploitation of wormhole-enabled communications can lead to unauthorized physical access, selective dropping of packets, and even denial of service. In scenarios involving combinations of mobile and static nodes, and in networks ranging from very sparse to very dense, this research provides a measure of protection against the threat of wormholes.
+</p>
+<h3>Publications</h3>
+<ol>
+<li><p>R. Stoleru, H. Wu, H. Chenji,
+&ldquo;Secure Neighbor Discovery and Worhmhole Localization for Mobile Ad Hoc Networks,&rdquo;
+in Ad Hoc Networks (Elsevier), Sep. 2012, Vol. 10, No. 7</p>
+</li>
+<li><p>R. Stoleru, H. Wu, H. Chenji,
+&ldquo;Secure Neighbor Discovery in Mobile Ad Hoc Networks&rdquo;,
+in 8th IEEE International Conference on Mobile Ad-hoc and Sensor Systems (MASS), 2011</p>
+</li>
+</ol>
+</div>
+<footer>
+Page generated 2021-10-11 15:53:44 Eastern Daylight Time, by <a id="footjemdoc" href="http://jemdoc.jaboc.net/">jemdoc</a>.
+</footer>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-53555617-2', 'auto');
+      ga('send', 'pageview');
+    </script>
+</body>
+</html>
